@@ -25,6 +25,8 @@ stages:
   triggers:
   - type: stage
   properties:
+  - name: AWS_REGION
+    type: text
   - name: AWS_SECRET_ACCESS_KEY
     type: secure
   - name: AWS_ACCESS_KEY_ID
