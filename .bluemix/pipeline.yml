@@ -14,21 +14,8 @@ stages:
     build_type: shell
     script: |
       #!/bin/bash
-      #Install PJP
-
-      echo "apt-get -qq update"
-      sudo apt-get -qq update
-
-      echo "sudo apt-get -qq -y install php5"
-      sudo apt-get -qq -y install php5
-
-      echo "apt-get -qq clean"
-      sudo apt-get -qq clean
-
       #Lint the PHP source
-      echo
-      echo "Lint the PHP source"
-      php -l *.php
+      echo "build"
 - name: Deploy Prod(AWS ECS)
   inputs:
   - type: job
